@@ -1,4 +1,6 @@
-# Swig precompiler for gulp (WIP) [![Build Status](https://travis-ci.org/motherinc/gulp-swig-precompile.png?branch=master)](https://travis-ci.org/motherinc/gulp-swig-precompile)
+# gulp-swig-precompile [![Build Status](https://travis-ci.org/motherinc/gulp-swig-precompile.png?branch=master)](https://travis-ci.org/motherinc/gulp-swig-precompile)
+
+Swig precompiler for gulp
 
 ## Install
 
