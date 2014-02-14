@@ -1,0 +1,32 @@
+{
+  "name": "gulp-swig-precompile",
+  "version": "0.0.1",
+  "description": "Swig precompiler for gulp",
+  "license": "MIT",
+  "repository": "motherinc/gulp-swig-precompile",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "swig",
+    "template",
+    "precompile",
+    "compile"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.0",
+    "through2": "~0.4.0",
+    "swig": "~1.3.2",
+    "xtend": "~2.1.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
