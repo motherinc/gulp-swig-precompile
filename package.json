@@ -4,6 +4,11 @@
   "description": "Swig precompiler for gulp",
   "license": "MIT",
   "repository": "motherinc/gulp-swig-precompile",
+  "author": {
+    "name": "Ajay Sabhaney",
+    "email": "ajay@mother.co",
+    "url": "http://mother.co/"
+  },
   "engines": {
     "node": ">=0.10.0"
   },

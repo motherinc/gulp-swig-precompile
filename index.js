@@ -15,7 +15,8 @@ module.exports = function (options) {
 
       var defaults = {
          filename: file.relative,
-         locals: {}
+         locals: {},
+         output: 'var tpl = <%= template %>;'
       };
 
       options = xtend({}, defaults, options);
@@ -49,6 +50,7 @@ module.exports = function (options) {
          }
 
          var tmpl = swig.precompile(file.contents.toString(), options).tpl.toString().replace('anonymous', '');
+         tmpl = gutil.template(options.output, { template : tmpl, file : file });
          file.contents = new Buffer(tmpl);
          file.path = gutil.replaceExtension(file.path, '.js');
       } catch (err) {
