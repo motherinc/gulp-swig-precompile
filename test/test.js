@@ -66,6 +66,27 @@ describe('gulp-swig-precompile', function() {
       stream.end();
    });
 
+   it('should be able to resolve paths properly', function(done) {
+      var stream = compiler();
+      var fakeFile = new gutil.File({
+         base: __dirname + '/fixtures',
+         path: __dirname + '/fixtures/inheritence.child.fixture.html',
+         contents: fs.readFileSync(path.join(__dirname, 'fixtures', 'inheritence.child.fixture.html'))
+      });
+
+      stream.on('data', function(newFile) {
+         var expectation = fs.readFileSync(path.join('test', 'expectations', 'inheritence.expectation.js'), 'utf8');
+         assert.equal(String(newFile.contents),expectation);
+      });
+
+      stream.on('end', function() {
+         done();
+      });
+
+      stream.write(fakeFile);
+      stream.end();
+   });
+
    it('should precompile a swig template with custom filters', function(done) {
       var stream = compiler({ filters: filters });
       var fakeFile = new gutil.File({

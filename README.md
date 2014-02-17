@@ -26,6 +26,8 @@ gulp.task('templates', function () {
 });
 ````
 
+Note that setting the base path also sets the root directory for the templates, which is useful for templates that make use of the ````extends````, ````import````, and ````include```` tags.
+
 ## API
 
 ### swig(options)
@@ -41,7 +43,7 @@ An inline template specifying how you would like the results of the precompilati
 Example usage:
 
 ````
-{ output: 'templates.register("<%= file.relative %>", <%= template %>);' }
+{ output: 'exports["<%= file.relative %>"]=<%= template %>;' }
 ````
 
 #### filters

@@ -1,6 +1,6 @@
 {
   "name": "gulp-swig-precompile",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Swig precompiler for gulp",
   "license": "MIT",
   "repository": "motherinc/gulp-swig-precompile",

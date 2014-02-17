@@ -16,6 +16,7 @@ module.exports = function (options) {
       var defaults = {
          filename: file.relative,
          locals: {},
+         loader: swig.loaders.fs(file.base),
          output: 'var tpl = <%= template %>;'
       };
 
@@ -32,6 +33,10 @@ module.exports = function (options) {
       }
 
       try {
+         if (options.loader) {
+            swig.setDefaults({ loader: options.loader });
+         }
+         
          if (options.filters) {
             for (var f in options.filters) {
                if (options.filters.hasOwnProperty(f)) {
